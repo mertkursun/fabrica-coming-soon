@@ -1,0 +1,154 @@
+/* Genel Sayfa Stilleri */
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed; /* Tüm ekranı kapsar */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Genişliği ekrana sabitler */
+  height: 100vh; /* Yüksekliği ekrana sabitler */
+  z-index: -1; /* Diğer içeriklerin arkasında kalır */
+  overflow: hidden; /* Taşan içerikleri gizler */
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ortalar */
+  width: 100vw; /* Ekranın genişliğini kaplar */
+  height: 56.25vw; /* 16:9 oranını korur (100 / (16 / 9)) */
+  min-width: 177.78vh; /* 16:9 oranını korur (100 / (9 / 16)) */
+  min-height: 100vh; /* Minimum yüksekliği ekran yüksekliği yapar */
+  border: none; /* Kenarları kaldırır */
+}
+
+
+/* Sayaç Alanı */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0 10px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-item p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.countdown-item span {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Logo Stili */
+.logo {
+  max-height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .countdown-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .countdown-item p {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .countdown-item p {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+}
+
+
+.title1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+}
+.id-color {
+  color: #F7E626;
+}
+.timer {
+  text-align: center;
+  background: rgba(255, 255, 255, .1);
+  padding: 30px 40px;
+  width: 70px;
+  height: 75px;
+
+}
+.timer p {
+  font-size: 48px;
+  margin: 0px;
+  font-weight: 800;
+  color: #fff;
+}
+.timer span {
+  font-size: 16px;
+    margin: 0 auto;
+    margin-top: 5px;
+    color: #F7E626;
+}
+
+.overlay {
+  position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(30, 30, 30, .6);
+}
